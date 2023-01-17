@@ -1,0 +1,6 @@
+(library
+ (name tiny_config)
+ (public_name tiny_config)
+ (instrumentation
+  (backend bisect_ppx))
+ (libraries base))

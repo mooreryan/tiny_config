@@ -1,0 +1,6 @@
+(library
+ (name tiny_toml)
+ (public_name tiny_toml)
+ (instrumentation
+  (backend bisect_ppx))
+ (libraries base otoml tiny_config))

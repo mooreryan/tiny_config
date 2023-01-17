@@ -1,0 +1,7 @@
+(library
+ (name tiny_config_test)
+ (public_name tiny_config_test)
+ (libraries base otoml stdio tiny_config tiny_toml tiny_yaml)
+ (inline_tests)
+ (preprocess
+  (pps ppx_inline_test ppx_expect ppx_let ppx_sexp_conv)))

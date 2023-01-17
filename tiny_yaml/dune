@@ -1,0 +1,6 @@
+(library
+ (name tiny_yaml)
+ (public_name tiny_yaml)
+ (instrumentation
+  (backend bisect_ppx))
+ (libraries base tiny_config yaml))
