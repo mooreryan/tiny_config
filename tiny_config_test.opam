@@ -16,6 +16,9 @@ depends: [
   "ppx_sexp_conv" {>= "v0.15.0" & < "v0.16.0"}
   "ppx_let" {>= "v0.15.0" & < "v0.16.0"}
   "stdio" {>= "v0.15.0" & < "v0.16.0"}
+  "tiny_config"
+  "tiny_toml"
+  "tiny_yaml"
   "odoc" {with-doc}
 ]
 build: [

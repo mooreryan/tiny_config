@@ -44,7 +44,10 @@
   (stdio
    (and
     (>= "v0.15.0")
-    (< "v0.16.0")))))
+    (< "v0.16.0")))
+  tiny_config
+  tiny_toml
+  tiny_yaml))
 
 (package
  (name tiny_config)
@@ -71,7 +74,9 @@
     (< "v0.16.0")))
   (otoml
    (and
-    (>= "1.0.0")))))
+    (>= "1.0.0")))
+  (tiny_config
+   (= "0.0.1"))))
 
 (package
  (name tiny_yaml)
@@ -84,6 +89,8 @@
    (and
     (>= "v0.15.0")
     (< "v0.16.0")))
+  (tiny_config
+   (= "0.0.1"))
   (yaml
    (and
     (>= "3.0.0")))))
