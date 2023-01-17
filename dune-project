@@ -4,6 +4,8 @@
 
 (cram enable)
 
+(name tiny_config)
+
 (maintainers "Ryan M. Moore")
 
 (authors "Ryan M. Moore")
