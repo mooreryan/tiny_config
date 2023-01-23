@@ -8,11 +8,11 @@ COV_FILE = tiny_config
 
 .PHONY: build_dev
 build_dev:
-	TINY_CONFIG_GIT_COMMIT_HASH=`git describe --always --dirty --abbrev=7` dune build --profile=dev
+	dune build --profile=dev
 
 .PHONY: build_release
 build_release:
-	TINY_CONFIG_GIT_COMMIT_HASH=`git describe --always --dirty --abbrev=7` dune build --profile=release
+	dune build --profile=release
 
 .PHONY: clean
 clean:
@@ -20,11 +20,11 @@ clean:
 
 .PHONY: install_dev
 install_dev:
-	TINY_CONFIG_GIT_COMMIT_HASH=`git describe --always --dirty --abbrev=7` dune install --profile=dev
+	dune install --profile=dev
 
 .PHONY: install_release
 install_release:
-	TINY_CONFIG_GIT_COMMIT_HASH=`git describe --always --dirty --abbrev=7` dune install --profile=release
+	dune install --profile=release
 
 .PHONY: test_dev
 test_dev:
