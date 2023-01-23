@@ -42,7 +42,7 @@ a:
     {|
     (Error
      ("config error: a -> b"
-      ("Tiny_yaml.E.Type_error(\"value must be int, found string\")"))) |}]
+      ("Tiny_yaml.Error.Type_error(\"value must be int, found string\")"))) |}]
 
 let%expect_test "find_opt gives (Ok None) if nested key is not present" =
   let y = Yaml.of_string_exn {|
@@ -73,7 +73,7 @@ a:
     {|
     (Error
      ("config error: a -> b"
-      ("Tiny_yaml.E.Type_error(\"value must be int, found string\")"))) |}]
+      ("Tiny_yaml.Error.Type_error(\"value must be int, found string\")"))) |}]
 
 let%expect_test "find_or gives default if nested key is not present and \
                  default parses properly" =
@@ -114,7 +114,7 @@ a:
     {|
     (Error
      ("config error: a -> b"
-      ("Tiny_yaml.E.Type_error(\"value must be int, found string\")"))) |}]
+      ("Tiny_yaml.Error.Type_error(\"value must be int, found string\")"))) |}]
 
 (* ****************************************************** *)
 

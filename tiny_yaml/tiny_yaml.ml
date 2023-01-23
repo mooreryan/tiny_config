@@ -1,6 +1,6 @@
 open! Base
 
-module E = struct
+module Error = struct
   exception Type_error of string
 end
 
@@ -9,7 +9,7 @@ module Accessor = struct
     type config = Yaml.value
   end)
 
-  let type_error msg = raise (E.Type_error msg)
+  let type_error msg = raise (Error.Type_error msg)
 
   let type_string = function
     | `A _ ->

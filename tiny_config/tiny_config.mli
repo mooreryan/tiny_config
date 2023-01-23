@@ -10,6 +10,6 @@ module Term : Term_intf.Intf
 
 module Value : Value_intf.Intf
 
-module E : sig
+module Error : sig
   exception Type_error of string
 end
