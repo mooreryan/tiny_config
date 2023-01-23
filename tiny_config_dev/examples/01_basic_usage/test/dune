@@ -1,0 +1,7 @@
+(cram
+ (enabled_if
+  (= %{profile} dev))
+ (deps
+  ../bin/toml_example.exe
+  ../bin/yaml_example.exe
+  (source_tree .)))

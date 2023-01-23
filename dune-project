@@ -20,15 +20,22 @@
 (bug_reports "https://github.com/mooreryan/tiny_config/issues")
 
 (package
- (name tiny_config_test)
- (synopsis "Test package for tiny_config")
- (version 0.0.1)
+ (name tiny_config_dev)
+ (allow_empty)
+ (synopsis "Dev package for tiny_config")
  (depends
   (ocaml
    (>= "4.14"))
   bisect_ppx
   (ocamlformat
    (= "0.23.0"))
+  (otoml
+   (and
+    (>= "1.0.0")))
+  (ppx_expect
+   (and
+    (>= "v0.15.0")
+    (< "v0.16.0")))
   (ppx_inline_test
    (and
     (>= "v0.15.0")
@@ -47,7 +54,10 @@
     (< "v0.16.0")))
   tiny_config
   tiny_toml
-  tiny_yaml))
+  tiny_yaml
+  (yaml
+   (and
+    (>= "3.0.0")))))
 
 (package
  (name tiny_config)

@@ -1,0 +1,5 @@
+(executables
+ (names toml_example yaml_example)
+ (libraries base otoml stdio tiny_toml tiny_yaml yaml)
+ (preprocess
+  (pps ppx_let ppx_sexp_conv)))
