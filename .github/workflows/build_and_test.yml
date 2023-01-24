@@ -1,0 +1,66 @@
+name: Build and test
+
+on:
+  push:
+    branches:
+      - "main"
+      - "staging"
+
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+        ocaml-compiler:
+          - 5.0.0
+          - 4.14.0
+          - 4.10.2
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use OCaml ${{ matrix.ocaml-compiler }}
+        uses: ocaml/setup-ocaml@v2
+        with:
+          ocaml-compiler: ${{ matrix.ocaml-compiler }}
+          dune-cache: true
+          cache-prefix: v1-${{ matrix.os }}
+          opam-pin: false
+          opam-depext: false
+
+      - run: opam pin add tiny_config .
+      - run: opam pin add tiny_toml .
+      - run: opam pin add tiny_yaml .
+      - run: opam pin add tiny_config_dev .
+
+      - name: Check release profile
+        run: |
+          opam exec -- make clean
+          opam exec -- make build_release
+          opam exec -- make test_release
+          opam exec -- make install_release
+
+      - name: Check dev profile
+        run: |
+          opam exec -- make clean
+          opam exec -- make build_dev
+          opam exec -- make test_dev
+          opam exec -- make install_dev
+
+      # Send the coverage.
+      - name: Send coverage
+        run: |
+          opam install bisect_ppx
+          opam exec -- make send_coverage
+        if: matrix.ocaml-compiler == '4.14.0'
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}

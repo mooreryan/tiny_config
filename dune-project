@@ -25,7 +25,7 @@
  (synopsis "Dev package for tiny_config")
  (depends
   (ocaml
-   (>= "4.14"))
+   (>= "4.10.2"))
   bisect_ppx
   (ocamlformat
    (= "0.23.0"))
@@ -65,7 +65,7 @@
  (version 0.0.1)
  (depends
   (ocaml
-   (>= "4.14"))
+   (>= "4.10.2"))
   (base
    (and
     (>= "v0.15.0")
@@ -77,7 +77,7 @@
  (version 0.0.1)
  (depends
   (ocaml
-   (>= "4.14"))
+   (>= "4.10.2"))
   (base
    (and
     (>= "v0.15.0")
@@ -94,7 +94,7 @@
  (version 0.0.1)
  (depends
   (ocaml
-   (>= "4.14"))
+   (>= "4.10.2"))
   (base
    (and
     (>= "v0.15.0")

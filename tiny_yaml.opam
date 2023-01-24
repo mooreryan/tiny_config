@@ -9,7 +9,7 @@ doc: "https://mooreryan.github.io/tiny_config/"
 bug-reports: "https://github.com/mooreryan/tiny_config/issues"
 depends: [
   "dune" {>= "3.5"}
-  "ocaml" {>= "4.14"}
+  "ocaml" {>= "4.10.2"}
   "base" {>= "v0.15.0" & < "v0.16.0"}
   "tiny_config" {= "0.0.1"}
   "yaml" {>= "3.0.0"}
