@@ -1,0 +1,5 @@
+(executables
+ (names quick_start)
+ (libraries base otoml stdio tiny_toml)
+ (preprocess
+  (pps ppx_let ppx_sexp_conv)))

@@ -1,0 +1,6 @@
+(cram
+ (enabled_if
+  (= %{profile} dev))
+ (deps
+  ../quick_start.exe
+  (source_tree ..)))
