@@ -12,7 +12,7 @@ depends: [
   "ocaml" {>= "4.10.2"}
   "base" {>= "v0.15.0"}
   "otoml" {>= "1.0.0"}
-  "tiny_config" {= "0.0.1"}
+  "tiny_config" {= "0.0.2"}
   "odoc" {with-doc}
 ]
 build: [

@@ -11,7 +11,7 @@ depends: [
   "dune" {>= "3.5"}
   "ocaml" {>= "4.10.2"}
   "base" {>= "v0.15.0"}
-  "tiny_config" {= "0.0.1"}
+  "tiny_config" {= "0.0.2"}
   "yaml" {>= "3.0.0"}
   "odoc" {with-doc}
 ]
