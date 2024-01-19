@@ -12,11 +12,11 @@ depends: [
   "bisect_ppx"
   "ocamlformat" {= "0.23.0"}
   "otoml" {>= "1.0.0"}
-  "ppx_expect" {>= "v0.15.0" & < "v0.16.0"}
-  "ppx_inline_test" {>= "v0.15.0" & < "v0.16.0"}
-  "ppx_sexp_conv" {>= "v0.15.0" & < "v0.16.0"}
-  "ppx_let" {>= "v0.15.0" & < "v0.16.0"}
-  "stdio" {>= "v0.15.0" & < "v0.16.0"}
+  "ppx_expect" {>= "v0.15.0"}
+  "ppx_inline_test" {>= "v0.15.0"}
+  "ppx_sexp_conv" {>= "v0.15.0"}
+  "ppx_let" {>= "v0.15.0"}
+  "stdio" {>= "v0.15.0"}
   "tiny_config"
   "tiny_toml"
   "tiny_yaml"

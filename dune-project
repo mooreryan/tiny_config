@@ -30,28 +30,17 @@
   (ocamlformat
    (= "0.23.0"))
   (otoml
-   (and
-    (>= "1.0.0")))
+   (>= "1.0.0"))
   (ppx_expect
-   (and
-    (>= "v0.15.0")
-    (< "v0.16.0")))
+   (>= "v0.15.0"))
   (ppx_inline_test
-   (and
-    (>= "v0.15.0")
-    (< "v0.16.0")))
+   (>= "v0.15.0"))
   (ppx_sexp_conv
-   (and
-    (>= "v0.15.0")
-    (< "v0.16.0")))
+   (>= "v0.15.0"))
   (ppx_let
-   (and
-    (>= "v0.15.0")
-    (< "v0.16.0")))
+   (>= "v0.15.0"))
   (stdio
-   (and
-    (>= "v0.15.0")
-    (< "v0.16.0")))
+   (>= "v0.15.0"))
   tiny_config
   tiny_toml
   tiny_yaml
@@ -62,26 +51,22 @@
 (package
  (name tiny_config)
  (synopsis "A tiny library for config files")
- (version 0.0.1)
+ (version 0.0.2)
  (depends
   (ocaml
    (>= "4.10.2"))
   (base
-   (and
-    (>= "v0.15.0")
-    (< "v0.16.0")))))
+   (>= "v0.15.0"))))
 
 (package
  (name tiny_toml)
  (synopsis "A tiny library for TOML config files")
- (version 0.0.1)
+ (version 0.0.2)
  (depends
   (ocaml
    (>= "4.10.2"))
   (base
-   (and
-    (>= "v0.15.0")
-    (< "v0.16.0")))
+   (>= "v0.15.0"))
   (otoml
    (and
     (>= "1.0.0")))
@@ -91,14 +76,12 @@
 (package
  (name tiny_yaml)
  (synopsis "A tiny library for YAML config files")
- (version 0.0.1)
+ (version 0.0.2)
  (depends
   (ocaml
    (>= "4.10.2"))
   (base
-   (and
-    (>= "v0.15.0")
-    (< "v0.16.0")))
+   (>= "v0.15.0"))
   (tiny_config
    (= "0.0.1"))
   (yaml
